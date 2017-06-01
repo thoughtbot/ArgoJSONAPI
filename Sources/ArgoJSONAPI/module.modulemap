@@ -1,0 +1,6 @@
+framework module ArgoJSONAPI [system] {
+  umbrella header "ArgoJSONAPI.h"
+
+  export *
+  module * { export * }
+}
