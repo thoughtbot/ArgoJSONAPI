@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A7171B91EE2085D009C59EB /* JSONAPIDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7171B81EE2085D009C59EB /* JSONAPIDecodable.swift */; };
 		4ABAD0161E450C6700661CD9 /* ArgoJSONAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABAD00C1E450C6700661CD9 /* ArgoJSONAPI.framework */; };
 		4ABAD01B1E450C6700661CD9 /* ArgoJSONAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABAD01A1E450C6700661CD9 /* ArgoJSONAPITests.swift */; };
 		4ABAD01D1E450C6700661CD9 /* ArgoJSONAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ABAD00F1E450C6700661CD9 /* ArgoJSONAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -42,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4A7171B81EE2085D009C59EB /* JSONAPIDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONAPIDecodable.swift; sourceTree = "<group>"; };
 		4ABAD00C1E450C6700661CD9 /* ArgoJSONAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArgoJSONAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ABAD00F1E450C6700661CD9 /* ArgoJSONAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArgoJSONAPI.h; sourceTree = "<group>"; };
 		4ABAD0101E450C6700661CD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				4ABAD00F1E450C6700661CD9 /* ArgoJSONAPI.h */,
+				4A7171B81EE2085D009C59EB /* JSONAPIDecodable.swift */,
 				4ABAD0101E450C6700661CD9 /* Info.plist */,
 			);
 			path = ArgoJSONAPI;
@@ -200,6 +203,7 @@
 					4ABAD00B1E450C6700661CD9 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 8E7TQ638ZD;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					4ABAD0141E450C6700661CD9 = {
@@ -249,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A7171B91EE2085D009C59EB /* JSONAPIDecodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +384,7 @@
 		4ABAD0211E450C6700661CD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8E7TQ638ZD;
@@ -390,6 +396,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -397,6 +404,7 @@
 		4ABAD0221E450C6700661CD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8E7TQ638ZD;
@@ -415,6 +423,7 @@
 		4ABAD0241E450C6700661CD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8E7TQ638ZD;
 				INFOPLIST_FILE = "Tests/$(TARGET_NAME)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -427,6 +436,7 @@
 		4ABAD0251E450C6700661CD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8E7TQ638ZD;
 				INFOPLIST_FILE = "Tests/$(TARGET_NAME)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

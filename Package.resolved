@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Argo",
+        "repositoryURL": "https://github.com/thoughtbot/Argo.git",
+        "state": {
+          "branch": null,
+          "revision": "203daf8fbebff84fb8d560acd3cad32a067b6189",
+          "version": "4.1.2"
+        }
+      },
+      {
+        "package": "Nimble",
+        "repositoryURL": "https://github.com/Quick/Nimble.git",
+        "state": {
+          "branch": "as-swift-4-swift-3-compat",
+          "revision": "a16802bd849817e64103dda91f3452355617d582",
+          "version": null
+        }
+      },
+      {
+        "package": "Quick",
+        "repositoryURL": "https://github.com/Quick/Quick.git",
+        "state": {
+          "branch": null,
+          "revision": "e4fa1e85c0305ba4e0866f25812d3fa398f3a048",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "Runes",
+        "repositoryURL": "https://github.com/thoughtbot/Runes.git",
+        "state": {
+          "branch": null,
+          "revision": "727fcfe8d79ec92ce989a96329147190d20f7cd2",
+          "version": "4.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
