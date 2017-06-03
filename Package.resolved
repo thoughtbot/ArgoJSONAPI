@@ -23,8 +23,8 @@
         "package": "Nimble",
         "repositoryURL": "https://github.com/Quick/Nimble.git",
         "state": {
-          "branch": "as-swift-4-swift-3-compat",
-          "revision": "10eaf5406461fd57a0a748ee895882dfc57435a4",
+          "branch": "master",
+          "revision": "4cfe93e4b72f66fe63906df8f93729b6ed902a71",
           "version": null
         }
       },
