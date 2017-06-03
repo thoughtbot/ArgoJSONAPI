@@ -15,7 +15,7 @@ final class RelationshipsSpec: QuickSpec {
           "relationships": [
             "child": [
               "data": [
-                "type": "has-one-child",
+                "type": "child",
                 "id": "child",
               ],
             ],
@@ -23,7 +23,7 @@ final class RelationshipsSpec: QuickSpec {
         ],
         "included": [
           [
-            "type": "has-one-child",
+            "type": "child",
             "id": "child",
             "attributes": [
               "name": "Some Child",
