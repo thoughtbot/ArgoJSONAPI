@@ -24,6 +24,10 @@
 		4AA2F8D71EE33BB6003FF142 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2F8D61EE33BB6003FF142 /* Data.swift */; };
 		4AA2F8E41EE33DC5003FF142 /* BasicResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2F8E01EE33DC1003FF142 /* BasicResource.swift */; };
 		4AA2F8E51EE33DC5003FF142 /* EmptyResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2F8E11EE33DC1003FF142 /* EmptyResource.swift */; };
+		4AA2F8EA1EE33EE9003FF142 /* Relationships.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2F8E81EE33EE9003FF142 /* Relationships.swift */; };
+		4AA2F8EB1EE33EE9003FF142 /* ResourceIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2F8E91EE33EE9003FF142 /* ResourceIdentifier.swift */; };
+		4AA2F8EC1EE33EF9003FF142 /* RelationshipsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2F8E61EE33EDA003FF142 /* RelationshipsSpec.swift */; };
+		4AA2F8EF1EE33F10003FF142 /* HasOneResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2F8ED1EE33F05003FF142 /* HasOneResource.swift */; };
 		4ABAD0161E450C6700661CD9 /* ArgoJSONAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABAD00C1E450C6700661CD9 /* ArgoJSONAPI.framework */; };
 		4ABAD01D1E450C6700661CD9 /* ArgoJSONAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ABAD00F1E450C6700661CD9 /* ArgoJSONAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4ABAD0301E4522F100661CD9 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABAD0291E45229C00661CD9 /* Nimble.framework */; };
@@ -75,6 +79,10 @@
 		4AA2F8D61EE33BB6003FF142 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		4AA2F8E01EE33DC1003FF142 /* BasicResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicResource.swift; sourceTree = "<group>"; };
 		4AA2F8E11EE33DC1003FF142 /* EmptyResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyResource.swift; sourceTree = "<group>"; };
+		4AA2F8E61EE33EDA003FF142 /* RelationshipsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationshipsSpec.swift; sourceTree = "<group>"; };
+		4AA2F8E81EE33EE9003FF142 /* Relationships.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Relationships.swift; sourceTree = "<group>"; };
+		4AA2F8E91EE33EE9003FF142 /* ResourceIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceIdentifier.swift; sourceTree = "<group>"; };
+		4AA2F8ED1EE33F05003FF142 /* HasOneResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasOneResource.swift; sourceTree = "<group>"; };
 		4ABAD00C1E450C6700661CD9 /* ArgoJSONAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArgoJSONAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ABAD00F1E450C6700661CD9 /* ArgoJSONAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArgoJSONAPI.h; sourceTree = "<group>"; };
 		4ABAD0101E450C6700661CD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,6 +123,7 @@
 			children = (
 				4AA2F8E01EE33DC1003FF142 /* BasicResource.swift */,
 				4AA2F8E11EE33DC1003FF142 /* EmptyResource.swift */,
+				4AA2F8ED1EE33F05003FF142 /* HasOneResource.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -148,6 +157,8 @@
 				4A38B9531EE27B0C0076B261 /* Document.swift */,
 				4AEBD85A1EEAD899000C683C /* Exports.swift */,
 				4A7171B81EE2085D009C59EB /* JSONAPIDecodable.swift */,
+				4AA2F8E81EE33EE9003FF142 /* Relationships.swift */,
+				4AA2F8E91EE33EE9003FF142 /* ResourceIdentifier.swift */,
 				4ABAD0101E450C6700661CD9 /* Info.plist */,
 			);
 			path = ArgoJSONAPI;
@@ -159,6 +170,7 @@
 				4AA2F8DF1EE33DC1003FF142 /* Resources */,
 				4A38B9551EE27BD30076B261 /* CollectionSpec.swift */,
 				4A7171BC1EE20FBD009C59EB /* ExportsSpec.swift */,
+				4AA2F8E61EE33EDA003FF142 /* RelationshipsSpec.swift */,
 				4A7171BD1EE20FBD009C59EB /* SimpleResourceSpec.swift */,
 				4ABAD01C1E450C6700661CD9 /* Info.plist */,
 			);
@@ -312,6 +324,8 @@
 				4A7171BB1EE20FAC009C59EB /* ArgoJSONAPI.swift in Sources */,
 				4A38B9541EE27B0C0076B261 /* Document.swift in Sources */,
 				4AA2F8D71EE33BB6003FF142 /* Data.swift in Sources */,
+				4AA2F8EB1EE33EE9003FF142 /* ResourceIdentifier.swift in Sources */,
+				4AA2F8EA1EE33EE9003FF142 /* Relationships.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,11 +333,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AA2F8EC1EE33EF9003FF142 /* RelationshipsSpec.swift in Sources */,
 				4AA2F8E41EE33DC5003FF142 /* BasicResource.swift in Sources */,
 				4AA2F8E51EE33DC5003FF142 /* EmptyResource.swift in Sources */,
 				4A76ED801EE261EE00490F9F /* ExportsSpec.swift in Sources */,
 				4A7171D61EE2503F009C59EB /* SimpleResourceSpec.swift in Sources */,
 				4A38B9571EE27BE10076B261 /* CollectionSpec.swift in Sources */,
+				4AA2F8EF1EE33F10003FF142 /* HasOneResource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,6 +6,7 @@ extension JSONAPI {
     public let type: String
     public let id: String
     public let attributes: JSON
+    public let relationships: Relationships
   }
 }
 
@@ -26,11 +27,12 @@ extension JSONAPI.Data {
       <^> data <| "type"
       <*> data <| "id"
       <*> (data <|? "attributes").map { $0 ?? .object([:]) }
+      <*> JSONAPI.Relationships.decode(data, from: document)
   }
 
-  private static var create: (String) -> (String) -> (JSON) -> JSONAPI.Data {
-    return { string in { id in { attributes in
-      JSONAPI.Data(type: string, id: id, attributes: attributes)
-    }}}
+  private static var create: (String) -> (String) -> (JSON) -> (JSONAPI.Relationships) -> JSONAPI.Data {
+    return { string in { id in { attributes in { relationships in
+      JSONAPI.Data(type: string, id: id, attributes: attributes, relationships: relationships)
+    }}}}
   }
 }
