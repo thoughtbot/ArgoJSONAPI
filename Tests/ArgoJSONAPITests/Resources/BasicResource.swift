@@ -1,7 +1,5 @@
 import ArgoJSONAPI
-import Argo
 import Curry
-import Runes
 
 struct BasicResource {
   var id: String

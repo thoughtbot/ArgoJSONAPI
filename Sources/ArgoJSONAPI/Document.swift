@@ -1,5 +1,4 @@
 import Argo
-import Runes
 
 enum Document<Resource: JSONAPIDecodable> {
   static func decodeCollection(_ data: JSON) -> Decoded<[Resource.DecodedType]> {

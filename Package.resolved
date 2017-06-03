@@ -5,9 +5,9 @@
         "package": "Argo",
         "repositoryURL": "https://github.com/thoughtbot/Argo.git",
         "state": {
-          "branch": null,
-          "revision": "203daf8fbebff84fb8d560acd3cad32a067b6189",
-          "version": "4.1.2"
+          "branch": "as-export-runes",
+          "revision": "9872c96ec056d3cf3e1c348df82ed20af7bb439d",
+          "version": null
         }
       },
       {

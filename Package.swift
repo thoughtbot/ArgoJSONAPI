@@ -8,7 +8,7 @@ let package = Package(
     .library(name: "ArgoJSONAPI", targets: ["ArgoJSONAPI"]),
   ],
   dependencies: [
-    .package(url: "https://github.com/thoughtbot/Argo.git", from: "4.0.0"),
+    .package(url: "https://github.com/thoughtbot/Argo.git", .branch("as-export-runes")),
     .package(url: "https://github.com/thoughtbot/Curry.git", from: "3.0.0"),
     .package(url: "https://github.com/Quick/Quick.git", .branch("as-swift-4-swift-3-compat")),
     .package(url: "https://github.com/Quick/Nimble.git", .branch("as-swift-4-swift-3-compat")),
