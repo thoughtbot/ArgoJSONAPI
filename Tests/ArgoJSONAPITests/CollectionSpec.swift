@@ -1,7 +1,6 @@
 import ArgoJSONAPI
 import Quick
 import Nimble
-import TestResources
 
 final class CollectionSpec: QuickSpec {
   override func spec() {
