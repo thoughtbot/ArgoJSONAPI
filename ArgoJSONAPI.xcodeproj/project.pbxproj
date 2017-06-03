@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A38B94A1EE26FDA0076B261 /* BasicResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38B9481EE26FCE0076B261 /* BasicResource.swift */; };
+		4A38B94C1EE270050076B261 /* Curry.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4A38B94B1EE270050076B261 /* Curry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4A38B94E1EE2702B0076B261 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A38B94B1EE270050076B261 /* Curry.framework */; };
+		4A38B94F1EE270350076B261 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A76ED7D1EE261BB00490F9F /* Runes.framework */; };
+		4A38B9501EE2703A0076B261 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A76ED7C1EE261BB00490F9F /* Argo.framework */; };
+		4A38B9511EE270460076B261 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A38B94B1EE270050076B261 /* Curry.framework */; };
+		4A38B9521EE270480076B261 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A76ED7C1EE261BB00490F9F /* Argo.framework */; };
 		4A7171B91EE2085D009C59EB /* JSONAPIDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7171B81EE2085D009C59EB /* JSONAPIDecodable.swift */; };
 		4A7171BB1EE20FAC009C59EB /* ArgoJSONAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7171BA1EE20FAC009C59EB /* ArgoJSONAPI.swift */; };
 		4A7171D21EE24ECE009C59EB /* EmptyResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7171CE1EE24EA6009C59EB /* EmptyResource.swift */; };
@@ -45,6 +52,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				4A38B94C1EE270050076B261 /* Curry.framework in Copy Frameworks */,
 				4A76ED821EE2625900490F9F /* Argo.framework in Copy Frameworks */,
 				4A76ED831EE2625900490F9F /* Runes.framework in Copy Frameworks */,
 				4A7171D41EE24EEE009C59EB /* ArgoJSONAPI.framework in Copy Frameworks */,
@@ -58,6 +66,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4A38B9481EE26FCE0076B261 /* BasicResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicResource.swift; sourceTree = "<group>"; };
+		4A38B94B1EE270050076B261 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		4A7171B81EE2085D009C59EB /* JSONAPIDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONAPIDecodable.swift; sourceTree = "<group>"; };
 		4A7171BA1EE20FAC009C59EB /* ArgoJSONAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgoJSONAPI.swift; sourceTree = "<group>"; };
 		4A7171BC1EE20FBD009C59EB /* ExportsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportsSpec.swift; sourceTree = "<group>"; };
@@ -82,6 +92,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A7171D31EE24EDB009C59EB /* ArgoJSONAPI.framework in Frameworks */,
+				4A38B9501EE2703A0076B261 /* Argo.framework in Frameworks */,
+				4A38B94E1EE2702B0076B261 /* Curry.framework in Frameworks */,
+				4A38B94F1EE270350076B261 /* Runes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +112,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ABAD0161E450C6700661CD9 /* ArgoJSONAPI.framework in Frameworks */,
+				4A38B9521EE270480076B261 /* Argo.framework in Frameworks */,
+				4A38B9511EE270460076B261 /* Curry.framework in Frameworks */,
 				4A76ED811EE2623B00490F9F /* TestResources.framework in Frameworks */,
 				4ABAD0301E4522F100661CD9 /* Nimble.framework in Frameworks */,
 				4ABAD0311E4522F100661CD9 /* Quick.framework in Frameworks */,
@@ -111,6 +126,7 @@
 		4A7171CD1EE24EA6009C59EB /* TestResources */ = {
 			isa = PBXGroup;
 			children = (
+				4A38B9481EE26FCE0076B261 /* BasicResource.swift */,
 				4A7171CE1EE24EA6009C59EB /* EmptyResource.swift */,
 				4A7171CF1EE24EA6009C59EB /* Info.plist */,
 			);
@@ -180,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				4A76ED7C1EE261BB00490F9F /* Argo.framework */,
+				4A38B94B1EE270050076B261 /* Curry.framework */,
 				4ABAD0291E45229C00661CD9 /* Nimble.framework */,
 				4ABAD02A1E45229C00661CD9 /* Quick.framework */,
 				4A76ED7D1EE261BB00490F9F /* Runes.framework */,
@@ -338,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A38B94A1EE26FDA0076B261 /* BasicResource.swift in Sources */,
 				4A7171D21EE24ECE009C59EB /* EmptyResource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +398,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Tests/TestResources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -399,6 +421,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Tests/TestResources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -566,6 +592,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8E7TQ638ZD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Tests/$(TARGET_NAME)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited).tests";
@@ -579,6 +609,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8E7TQ638ZD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Tests/$(TARGET_NAME)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(inherited).tests";
