@@ -37,5 +37,48 @@ final class RelationshipsSpec: QuickSpec {
       expect(resource?.child.id) == "child"
       expect(resource?.child.name) == "Some Child"
     }
+
+    it("decodes a resource with a has-many relationship") {
+      let resource: HasManyResource? = decode([
+        "data": [
+          "type": "has-many",
+          "id": "parent",
+          "attributes": [
+            "name": "Busy Parent",
+          ],
+          "relationships": [
+            "children": [
+              "data": [
+                ["type": "child", "id": "first"],
+                ["type": "child", "id": "second"],
+              ],
+            ],
+          ],
+        ],
+        "included": [
+          [
+            "type": "child",
+            "id": "first",
+            "attributes": [
+              "name": "First Child",
+            ],
+          ],
+          [
+            "type": "child",
+            "id": "second",
+            "attributes": [
+              "name": "Second Child",
+            ],
+          ],
+        ]
+      ])
+
+      expect(resource?.id) == "parent"
+      expect(resource?.name) == "Busy Parent"
+      expect(resource?.children) == [
+        ChildResource(id: "first", name: "First Child"),
+        ChildResource(id: "second", name: "Second Child"),
+      ]
+    }
   }
 }
