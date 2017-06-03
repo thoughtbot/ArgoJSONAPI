@@ -1,3 +1,3 @@
 # ArgoJSONAPI
 
-A description of this package.
+An extension to Argo for parsing [JSON API](http://jsonapi.org/).
