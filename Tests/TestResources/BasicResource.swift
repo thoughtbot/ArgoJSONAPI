@@ -16,6 +16,8 @@ public struct BasicResource {
 }
 
 extension BasicResource: JSONAPIDecodable {
+  public static let resourceType = "basic"
+
   public static func decode(id: String, attributes: JSON) -> Decoded<BasicResource> {
     return curry(BasicResource.init)
       <^> pure(id)

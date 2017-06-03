@@ -35,5 +35,19 @@ final class SimpleResourceSpec: QuickSpec {
         expect(resource?.int) == 123
       }
     }
+
+    describe("failed decoding") {
+      it("fails to decode if the resource type doesn't match") {
+        let resource: Decoded<EmptyResource> = decode([
+          "data": [
+            "type": "not-empty",
+            "id": "whatever",
+          ],
+        ])
+
+        expect(resource.value).to(beNil())
+        expect(resource.error).toNot(beNil())
+      }
+    }
   }
 }
