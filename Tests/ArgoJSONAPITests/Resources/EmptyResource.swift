@@ -7,8 +7,8 @@ struct EmptyResource {
 extension EmptyResource: JSONAPIDecodable {
   static let resourceType = "empty"
 
-  static func decode(id: String, attributes _: JSON) -> Decoded<EmptyResource> {
-    return pure(EmptyResource(id: id))
+  static func decode(_ data: JSONAPI.Data) -> Decoded<EmptyResource> {
+    return pure(EmptyResource(id: data.id))
   }
 }
 

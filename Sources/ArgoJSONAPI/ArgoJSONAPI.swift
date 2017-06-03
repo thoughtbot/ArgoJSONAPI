@@ -1,20 +1,21 @@
 import Argo
-import Runes
+
+/// Defines a namespace for public types.
+public enum JSONAPI {
+}
 
 public func decode<T: JSONAPIDecodable>(_ object: Any) -> Decoded<T>
   where T.DecodedType == T
 {
   let json = JSON(object)
-
-  return (json <| "data") >>- Document<T>.decodeResource
+  return Document<T>.decodeResource(json)
 }
 
 public func decode<T: JSONAPIDecodable>(_ object: Any) -> Decoded<[T]>
   where T.DecodedType == T
 {
   let json = JSON(object)
-
-  return (json <| "data") >>- Document<T>.decodeCollection
+  return Document<T>.decodeCollection(json)
 }
 
 public func decode<T: JSONAPIDecodable>(_ object: Any) -> T?

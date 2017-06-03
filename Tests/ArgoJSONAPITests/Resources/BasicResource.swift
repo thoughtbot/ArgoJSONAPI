@@ -12,10 +12,10 @@ struct BasicResource {
 extension BasicResource: JSONAPIDecodable {
   static let resourceType = "basic"
 
-  static func decode(id: String, attributes: JSON) -> Decoded<BasicResource> {
+  static func decode(_ data: JSONAPI.Data) -> Decoded<BasicResource> {
     return curry(BasicResource.init)
-      <^> pure(id)
-      <*> attributes <| "string"
-      <*> attributes <| "int"
+      <^> pure(data.id)
+      <*> data.attributes <| "string"
+      <*> data.attributes <| "int"
   }
 }

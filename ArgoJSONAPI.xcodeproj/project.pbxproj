@@ -21,6 +21,7 @@
 		4A76ED801EE261EE00490F9F /* ExportsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7171BC1EE20FBD009C59EB /* ExportsSpec.swift */; };
 		4A76ED821EE2625900490F9F /* Argo.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4A76ED7C1EE261BB00490F9F /* Argo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A76ED831EE2625900490F9F /* Runes.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4A76ED7D1EE261BB00490F9F /* Runes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4AA2F8D71EE33BB6003FF142 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2F8D61EE33BB6003FF142 /* Data.swift */; };
 		4AA2F8E41EE33DC5003FF142 /* BasicResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2F8E01EE33DC1003FF142 /* BasicResource.swift */; };
 		4AA2F8E51EE33DC5003FF142 /* EmptyResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2F8E11EE33DC1003FF142 /* EmptyResource.swift */; };
 		4ABAD0161E450C6700661CD9 /* ArgoJSONAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABAD00C1E450C6700661CD9 /* ArgoJSONAPI.framework */; };
@@ -70,6 +71,7 @@
 		4A7171BD1EE20FBD009C59EB /* SimpleResourceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleResourceSpec.swift; sourceTree = "<group>"; };
 		4A76ED7C1EE261BB00490F9F /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		4A76ED7D1EE261BB00490F9F /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
+		4AA2F8D61EE33BB6003FF142 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		4AA2F8E01EE33DC1003FF142 /* BasicResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicResource.swift; sourceTree = "<group>"; };
 		4AA2F8E11EE33DC1003FF142 /* EmptyResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyResource.swift; sourceTree = "<group>"; };
 		4ABAD00C1E450C6700661CD9 /* ArgoJSONAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArgoJSONAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +142,7 @@
 			children = (
 				4ABAD00F1E450C6700661CD9 /* ArgoJSONAPI.h */,
 				4A7171BA1EE20FAC009C59EB /* ArgoJSONAPI.swift */,
+				4AA2F8D61EE33BB6003FF142 /* Data.swift */,
 				4A38B9531EE27B0C0076B261 /* Document.swift */,
 				4A7171B81EE2085D009C59EB /* JSONAPIDecodable.swift */,
 				4ABAD0101E450C6700661CD9 /* Info.plist */,
@@ -304,6 +307,7 @@
 				4A7171B91EE2085D009C59EB /* JSONAPIDecodable.swift in Sources */,
 				4A7171BB1EE20FAC009C59EB /* ArgoJSONAPI.swift in Sources */,
 				4A38B9541EE27B0C0076B261 /* Document.swift in Sources */,
+				4AA2F8D71EE33BB6003FF142 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

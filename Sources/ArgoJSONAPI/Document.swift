@@ -2,28 +2,21 @@ import Argo
 import Runes
 
 enum Document<Resource: JSONAPIDecodable> {
-  static func decodeCollection(_ data: JSON) -> Decoded<[Resource.DecodedType]> {
-    let array: Decoded<[JSON]> = decodeArray(data)
-
-    return array >>- { array in
-      sequence(decodeResource <^> array)
+  static func decodeCollection(_ json: JSON) -> Decoded<[Resource.DecodedType]> {
+    return JSONAPI.Data.decodeCollection(json) >>- { collection in
+      sequence(decodeSimpleResource <^> collection)
     }
   }
 
-  static func decodeResource(_ data: JSON) -> Decoded<Resource.DecodedType> {
-    let type: Decoded<String> = data <| "type"
+  static func decodeResource(_ json: JSON) -> Decoded<Resource.DecodedType> {
+    return JSONAPI.Data.decodeResource(json) >>- decodeSimpleResource
+  }
 
-    guard type.value == Resource.resourceType else {
+  private static func decodeSimpleResource(_ data: JSONAPI.Data) -> Decoded<Resource.DecodedType> {
+    guard data.type == Resource.resourceType else {
       return .typeMismatch(expected: Resource.resourceType, actual: data)
     }
 
-    let id: Decoded<String> = data <| "id"
-    let attributes: Decoded<JSON?> = data <|? "attributes"
-
-    return id >>- { id in
-      attributes >>- { attributes in
-        Resource.decode(id: id, attributes: attributes ?? .object([:]))
-      }
-    }
+    return Resource.decode(data)
   }
 }
