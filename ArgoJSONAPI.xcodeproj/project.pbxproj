@@ -7,26 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A38B94A1EE26FDA0076B261 /* BasicResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38B9481EE26FCE0076B261 /* BasicResource.swift */; };
 		4A38B94C1EE270050076B261 /* Curry.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4A38B94B1EE270050076B261 /* Curry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4A38B94E1EE2702B0076B261 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A38B94B1EE270050076B261 /* Curry.framework */; };
-		4A38B94F1EE270350076B261 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A76ED7D1EE261BB00490F9F /* Runes.framework */; };
-		4A38B9501EE2703A0076B261 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A76ED7C1EE261BB00490F9F /* Argo.framework */; };
 		4A38B9511EE270460076B261 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A38B94B1EE270050076B261 /* Curry.framework */; };
 		4A38B9521EE270480076B261 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A76ED7C1EE261BB00490F9F /* Argo.framework */; };
 		4A38B9541EE27B0C0076B261 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38B9531EE27B0C0076B261 /* Document.swift */; };
 		4A38B9571EE27BE10076B261 /* CollectionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A38B9551EE27BD30076B261 /* CollectionSpec.swift */; };
 		4A7171B91EE2085D009C59EB /* JSONAPIDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7171B81EE2085D009C59EB /* JSONAPIDecodable.swift */; };
 		4A7171BB1EE20FAC009C59EB /* ArgoJSONAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7171BA1EE20FAC009C59EB /* ArgoJSONAPI.swift */; };
-		4A7171D21EE24ECE009C59EB /* EmptyResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7171CE1EE24EA6009C59EB /* EmptyResource.swift */; };
-		4A7171D31EE24EDB009C59EB /* ArgoJSONAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABAD00C1E450C6700661CD9 /* ArgoJSONAPI.framework */; };
 		4A7171D41EE24EEE009C59EB /* ArgoJSONAPI.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABAD00C1E450C6700661CD9 /* ArgoJSONAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4A7171D51EE24EEE009C59EB /* TestResources.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4A7171C51EE24E82009C59EB /* TestResources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A7171D61EE2503F009C59EB /* SimpleResourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7171BD1EE20FBD009C59EB /* SimpleResourceSpec.swift */; };
 		4A76ED7E1EE261BB00490F9F /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A76ED7C1EE261BB00490F9F /* Argo.framework */; };
 		4A76ED7F1EE261BB00490F9F /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A76ED7D1EE261BB00490F9F /* Runes.framework */; };
 		4A76ED801EE261EE00490F9F /* ExportsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7171BC1EE20FBD009C59EB /* ExportsSpec.swift */; };
-		4A76ED811EE2623B00490F9F /* TestResources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A7171C51EE24E82009C59EB /* TestResources.framework */; };
 		4A76ED821EE2625900490F9F /* Argo.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4A76ED7C1EE261BB00490F9F /* Argo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A76ED831EE2625900490F9F /* Runes.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4A76ED7D1EE261BB00490F9F /* Runes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4ABAD0161E450C6700661CD9 /* ArgoJSONAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABAD00C1E450C6700661CD9 /* ArgoJSONAPI.framework */; };
@@ -58,7 +50,6 @@
 				4A76ED821EE2625900490F9F /* Argo.framework in Copy Frameworks */,
 				4A76ED831EE2625900490F9F /* Runes.framework in Copy Frameworks */,
 				4A7171D41EE24EEE009C59EB /* ArgoJSONAPI.framework in Copy Frameworks */,
-				4A7171D51EE24EEE009C59EB /* TestResources.framework in Copy Frameworks */,
 				4ABAD0331E4522FC00661CD9 /* Nimble.framework in Copy Frameworks */,
 				4ABAD0341E4522FC00661CD9 /* Quick.framework in Copy Frameworks */,
 			);
@@ -68,7 +59,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4A38B9481EE26FCE0076B261 /* BasicResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicResource.swift; sourceTree = "<group>"; };
 		4A38B94B1EE270050076B261 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		4A38B9531EE27B0C0076B261 /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		4A38B9551EE27BD30076B261 /* CollectionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionSpec.swift; sourceTree = "<group>"; };
@@ -76,9 +66,6 @@
 		4A7171BA1EE20FAC009C59EB /* ArgoJSONAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgoJSONAPI.swift; sourceTree = "<group>"; };
 		4A7171BC1EE20FBD009C59EB /* ExportsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportsSpec.swift; sourceTree = "<group>"; };
 		4A7171BD1EE20FBD009C59EB /* SimpleResourceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleResourceSpec.swift; sourceTree = "<group>"; };
-		4A7171C51EE24E82009C59EB /* TestResources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestResources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A7171CE1EE24EA6009C59EB /* EmptyResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyResource.swift; sourceTree = "<group>"; };
-		4A7171CF1EE24EA6009C59EB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A76ED7C1EE261BB00490F9F /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		4A76ED7D1EE261BB00490F9F /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		4ABAD00C1E450C6700661CD9 /* ArgoJSONAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArgoJSONAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,17 +78,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4A7171C11EE24E82009C59EB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4A7171D31EE24EDB009C59EB /* ArgoJSONAPI.framework in Frameworks */,
-				4A38B9501EE2703A0076B261 /* Argo.framework in Frameworks */,
-				4A38B94E1EE2702B0076B261 /* Curry.framework in Frameworks */,
-				4A38B94F1EE270350076B261 /* Runes.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4ABAD0081E450C6700661CD9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -118,7 +94,6 @@
 				4ABAD0161E450C6700661CD9 /* ArgoJSONAPI.framework in Frameworks */,
 				4A38B9521EE270480076B261 /* Argo.framework in Frameworks */,
 				4A38B9511EE270460076B261 /* Curry.framework in Frameworks */,
-				4A76ED811EE2623B00490F9F /* TestResources.framework in Frameworks */,
 				4ABAD0301E4522F100661CD9 /* Nimble.framework in Frameworks */,
 				4ABAD0311E4522F100661CD9 /* Quick.framework in Frameworks */,
 			);
@@ -127,16 +102,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A7171CD1EE24EA6009C59EB /* TestResources */ = {
-			isa = PBXGroup;
-			children = (
-				4A38B9481EE26FCE0076B261 /* BasicResource.swift */,
-				4A7171CE1EE24EA6009C59EB /* EmptyResource.swift */,
-				4A7171CF1EE24EA6009C59EB /* Info.plist */,
-			);
-			path = TestResources;
-			sourceTree = "<group>";
-		};
 		4ABAD0021E450C6700661CD9 = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +118,6 @@
 			children = (
 				4ABAD00C1E450C6700661CD9 /* ArgoJSONAPI.framework */,
 				4ABAD0151E450C6700661CD9 /* ArgoJSONAPITests.xctest */,
-				4A7171C51EE24E82009C59EB /* TestResources.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				4ABAD0191E450C6700661CD9 /* ArgoJSONAPITests */,
-				4A7171CD1EE24EA6009C59EB /* TestResources */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -213,13 +176,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4A7171C21EE24E82009C59EB /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4ABAD0091E450C6700661CD9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -231,24 +187,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4A7171C41EE24E82009C59EB /* TestResources */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4A7171CA1EE24E82009C59EB /* Build configuration list for PBXNativeTarget "TestResources" */;
-			buildPhases = (
-				4A7171C01EE24E82009C59EB /* Sources */,
-				4A7171C11EE24E82009C59EB /* Frameworks */,
-				4A7171C21EE24E82009C59EB /* Headers */,
-				4A7171C31EE24E82009C59EB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TestResources;
-			productName = TestResources;
-			productReference = 4A7171C51EE24E82009C59EB /* TestResources.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		4ABAD00B1E450C6700661CD9 /* ArgoJSONAPI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4ABAD0201E450C6700661CD9 /* Build configuration list for PBXNativeTarget "ArgoJSONAPI" */;
@@ -296,10 +234,6 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = thoughtbot;
 				TargetAttributes = {
-					4A7171C41EE24E82009C59EB = {
-						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Automatic;
-					};
 					4ABAD00B1E450C6700661CD9 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 8E7TQ638ZD;
@@ -327,19 +261,11 @@
 			targets = (
 				4ABAD00B1E450C6700661CD9 /* ArgoJSONAPI */,
 				4ABAD0141E450C6700661CD9 /* ArgoJSONAPITests */,
-				4A7171C41EE24E82009C59EB /* TestResources */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4A7171C31EE24E82009C59EB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4ABAD00A1E450C6700661CD9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -357,15 +283,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4A7171C01EE24E82009C59EB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4A38B94A1EE26FDA0076B261 /* BasicResource.swift in Sources */,
-				4A7171D21EE24ECE009C59EB /* EmptyResource.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4ABAD0071E450C6700661CD9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -397,52 +314,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		4A7171CB1EE24E82009C59EB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = Tests/TestResources/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.TestResources;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		4A7171CC1EE24E82009C59EB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = Tests/TestResources/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.TestResources;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
 		4ABAD01E1E450C6700661CD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -632,15 +503,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4A7171CA1EE24E82009C59EB /* Build configuration list for PBXNativeTarget "TestResources" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4A7171CB1EE24E82009C59EB /* Debug */,
-				4A7171CC1EE24E82009C59EB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4ABAD0061E450C6700661CD9 /* Build configuration list for PBXProject "ArgoJSONAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

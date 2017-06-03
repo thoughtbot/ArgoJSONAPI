@@ -21,17 +21,10 @@ let package = Package(
       ]
     ),
     .testTarget(
-      name: "TestResources",
-      dependencies: [
-        "ArgoJSONAPI",
-        "Curry",
-      ]
-    ),
-    .testTarget(
       name: "ArgoJSONAPITests",
       dependencies: [
         "ArgoJSONAPI",
-        "TestResources",
+        "Curry",
         "Quick",
         "Nimble",
       ]
