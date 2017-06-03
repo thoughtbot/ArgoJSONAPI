@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/Quick/Nimble.git",
         "state": {
           "branch": "as-swift-4-swift-3-compat",
-          "revision": "a16802bd849817e64103dda91f3452355617d582",
+          "revision": "10eaf5406461fd57a0a748ee895882dfc57435a4",
           "version": null
         }
       },
@@ -23,9 +23,9 @@
         "package": "Quick",
         "repositoryURL": "https://github.com/Quick/Quick.git",
         "state": {
-          "branch": null,
-          "revision": "e4fa1e85c0305ba4e0866f25812d3fa398f3a048",
-          "version": "1.1.0"
+          "branch": "as-swift-4-swift-3-compat",
+          "revision": "c06dafd95d20e1cd37d0b91d7b25067603586bbb",
+          "version": null
         }
       },
       {
