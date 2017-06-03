@@ -15,3 +15,9 @@ extension EmptyResource: JSONAPIDecodable {
     return pure(EmptyResource(id: id))
   }
 }
+
+extension EmptyResource: Equatable {
+  public static func == (lhs: EmptyResource, rhs: EmptyResource) -> Bool {
+    return lhs.id == rhs.id
+  }
+}

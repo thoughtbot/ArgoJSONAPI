@@ -1,7 +1,6 @@
 import ArgoJSONAPI
 import Quick
 import Nimble
-import Foundation
 import TestResources
 
 final class SimpleResourceSpec: QuickSpec {

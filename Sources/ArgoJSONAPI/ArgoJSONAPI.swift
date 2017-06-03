@@ -1,26 +1,37 @@
 import Argo
 import Runes
 
+public enum JSONAPI {
+}
+
 public func decode<T: JSONAPIDecodable>(_ object: Any) -> Decoded<T>
   where T.DecodedType == T
 {
   let json = JSON(object)
-  let data: Decoded<JSON> = json <| "data"
 
-  return data >>- { (data: JSON) in
-    let type: Decoded<String> = data <| "type"
-
-    guard type.value == T.resourceType else {
-      return .typeMismatch(expected: T.resourceType, actual: data)
+  return JSONAPI.Document<T>.decode(json) >>- { document in
+    switch document {
+    case let .resource(resource):
+      return pure(resource)
+    case let .collection(collection):
+      let typeDescription = String(describing: T.self)
+      return .typeMismatch(expected: typeDescription, actual: collection)
     }
+  }
+}
 
-    let id: Decoded<String> = data <| "id"
-    let attributes: Decoded<JSON?> = data <|? "attributes"
+public func decode<T: JSONAPIDecodable>(_ object: Any) -> Decoded<[T]>
+  where T.DecodedType == T
+{
+  let json = JSON(object)
 
-    return id >>- { id in
-      attributes >>- { attributes in
-        T.decode(id: id, attributes: attributes ?? .object([:]))
-      }
+  return JSONAPI.Document<T>.decode(json) >>- { document in
+    switch document {
+    case let .collection(collection):
+      return pure(collection)
+    case let .resource(resource):
+      let typeDescription = String(describing: [T].self)
+      return .typeMismatch(expected: typeDescription, actual: resource)
     }
   }
 }
@@ -29,5 +40,12 @@ public func decode<T: JSONAPIDecodable>(_ object: Any) -> T?
   where T.DecodedType == T
 {
   let decoded: Decoded<T> = decode(object)
+  return decoded.value
+}
+
+public func decode<T: JSONAPIDecodable>(_ object: Any) -> [T]?
+  where T.DecodedType == T
+{
+  let decoded: Decoded<[T]> = decode(object)
   return decoded.value
 }
