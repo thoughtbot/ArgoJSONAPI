@@ -80,5 +80,73 @@ final class RelationshipsSpec: QuickSpec {
         ChildResource(id: "second", name: "Second Child"),
       ]
     }
+
+    it("decodes a resource with multiple levels of linkage") {
+      let post: Post? = decode([
+        "data": [
+          "type": "posts",
+          "id": "the-greatest",
+          "attributes": [
+            "title": "The greatest post",
+          ],
+          "relationships": [
+            "comments": [
+              "data": [
+                ["type": "comments", "id": "1"],
+                ["type": "comments", "id": "2"],
+              ],
+            ],
+          ],
+        ],
+        "included": [
+          [
+            "type": "comments",
+            "id": "1",
+            "attributes": [
+              "body": "First!",
+            ],
+            "relationships": [
+              "author": [
+                "data": [
+                  "type": "members",
+                  "id": "1",
+                ],
+              ],
+            ],
+          ],
+          [
+            "type": "comments",
+            "id": "2",
+            "attributes": [
+              "body": "Second!",
+            ],
+            "relationships": [
+              "author": [
+                "data": [
+                  "type": "members",
+                  "id": "1",
+                ],
+              ],
+            ],
+          ],
+          [
+            "type": "members",
+            "id": "1",
+            "attributes": [
+              "name": "Member 1",
+            ],
+          ],
+        ],
+      ])
+
+      expect(post?.slug) == "the-greatest"
+      expect(post?.title) == "The greatest post"
+
+      let expectedAuthor = Member(id: "1", name: "Member 1")
+      expect(post?.comments) == [
+        Comment(id: "1", body: "First!", author: expectedAuthor),
+        Comment(id: "2", body: "Second!", author: expectedAuthor),
+      ]
+    }
   }
 }
