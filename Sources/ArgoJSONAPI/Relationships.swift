@@ -37,6 +37,15 @@ extension JSONAPI.Relationships {
       }
     }
   }
+
+  static func decode(_ data: JSON, referencing included: [ResourceIdentifier: JSON]) -> Decoded<JSONAPI.Relationships> {
+    let resources: Decoded<JSON?> = data <|? "relationships"
+
+    return resources.map { resources in
+      guard let resources = resources else { return .none }
+      return JSONAPI.Relationships(resources: resources, included: included)
+    }
+  }
 }
 
 private func extractIdentifier(insertingInto result: [ResourceIdentifier: JSON], from data: JSON) -> Decoded<[ResourceIdentifier: JSON]> {
@@ -78,13 +87,9 @@ extension JSONAPI.Relationships {
   {
     let data = relationships.included[id].map(pure) ?? .customError("relationship not found with id '\(id)'")
 
-    let document = data.map { data in
-      JSON.object([
-        "data": data,
-        "included": .array(Array(relationships.included.values)),
-      ])
+    return data >>- { data in
+      let data = JSONAPI.Data.decodeResource(data, referencing: relationships.included)
+      return data >>- T.decode
     }
-
-    return document >>- Document<T>.decodeResource
   }
 }

@@ -23,11 +23,20 @@ extension JSONAPI.Data {
   }
 
   static func decodeResource(_ data: JSON, from document: JSON) -> Decoded<JSONAPI.Data> {
+    return partiallyDecode(data)
+      <*> JSONAPI.Relationships.decode(data, from: document)
+  }
+
+  static func decodeResource(_ data: JSON, referencing included: [ResourceIdentifier: JSON]) -> Decoded<JSONAPI.Data> {
+    return partiallyDecode(data)
+      <*> JSONAPI.Relationships.decode(data, referencing: included)
+  }
+
+  private static func partiallyDecode(_ data: JSON) -> Decoded<(JSONAPI.Relationships) -> JSONAPI.Data> {
     return JSONAPI.Data.create
       <^> data <| "type"
       <*> data <| "id"
       <*> (data <|? "attributes").map { $0 ?? .object([:]) }
-      <*> JSONAPI.Relationships.decode(data, from: document)
   }
 
   private static var create: (String) -> (String) -> (JSON) -> (JSONAPI.Relationships) -> JSONAPI.Data {
