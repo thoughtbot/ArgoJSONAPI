@@ -11,18 +11,18 @@ extension JSONAPI {
 }
 
 extension JSONAPI.Data {
-  public static func decodeCollection(_ document: JSON) -> Decoded<[JSONAPI.Data]> {
+  static func decodeCollection(_ document: JSON) -> Decoded<[JSONAPI.Data]> {
     let array: Decoded<[JSON]> = document <|| "data"
     return array >>- { array in
-      sequence(array.map { decodeSimpleResource($0, from: document) })
+      sequence(array.map { decodeResource($0, from: document) })
     }
   }
 
-  public static func decodeResource(_ document: JSON) -> Decoded<JSONAPI.Data> {
-    return (document <| "data") >>- { decodeSimpleResource($0, from: document) }
+  static func decodeResource(_ document: JSON) -> Decoded<JSONAPI.Data> {
+    return (document <| "data") >>- { decodeResource($0, from: document) }
   }
 
-  private static func decodeSimpleResource(_ data: JSON, from document: JSON) -> Decoded<JSONAPI.Data> {
+  static func decodeResource(_ data: JSON, from document: JSON) -> Decoded<JSONAPI.Data> {
     return JSONAPI.Data.create
       <^> data <| "type"
       <*> data <| "id"
