@@ -88,7 +88,7 @@ extension JSONAPI.Relationships {
   private static func decodeResource<T: JSONAPIDecodable>(with id: ResourceIdentifier, from relationships: inout JSONAPI.RawRelationships) -> Decoded<T>
     where T.DecodedType == T
   {
-    let data = relationships.remove(with: id).map(pure) ?? .customError("")
+    let data = relationships.remove(with: id).map(pure) ?? .customError("relationship not found with id '\(id)'")
 
     let document = data.map { data in
       JSON.object([

@@ -4,6 +4,16 @@ import Runes
 struct ResourceIdentifier {
   var type: String
   var id: String
+
+  var pathFragment: String {
+    return "\(type)/\(id)"
+  }
+}
+
+extension ResourceIdentifier: CustomStringConvertible {
+  var description: String {
+    return pathFragment
+  }
 }
 
 extension ResourceIdentifier: Equatable {
