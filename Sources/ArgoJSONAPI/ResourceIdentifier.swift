@@ -23,6 +23,12 @@ extension ResourceIdentifier: Equatable {
   }
 }
 
+extension ResourceIdentifier: Hashable {
+  var hashValue: Int {
+    return pathFragment.hashValue
+  }
+}
+
 extension ResourceIdentifier: Argo.Decodable {
   static func decode(_ json: JSON) -> Decoded<ResourceIdentifier> {
     return create

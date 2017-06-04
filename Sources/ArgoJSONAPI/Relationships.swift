@@ -10,29 +10,12 @@ extension JSONAPI {
 
   struct RawRelationships {
     var resources: JSON
-    var included: [JSON]
-
-    mutating func remove(with identifier: ResourceIdentifier) -> JSON? {
-      let index = included.index { data in
-        switch ResourceIdentifier.decode(data) {
-        case .success(identifier):
-          return true
-        default:
-          return false
-        }
-      }
-
-      if let index = index {
-        return included.remove(at: index)
-      } else {
-        return nil
-      }
-    }
+    var included: [ResourceIdentifier: JSON]
   }
 }
 
 extension JSONAPI.Relationships {
-  init(resources: JSON, included: [JSON]) {
+  init(resources: JSON, included: [ResourceIdentifier: JSON]) {
     rawValue = JSONAPI.RawRelationships(
       resources: resources,
       included: included
@@ -49,12 +32,17 @@ extension JSONAPI.Relationships {
       let included: Decoded<[JSON]> = document <|| "included"
 
       return included >>- { included in
-        pure(JSONAPI.Relationships(
-          resources: resources,
-          included: included
-        ))
+        let included = flatReduce(included, initial: [:], combine: extractIdentifier)
+        return included.map { JSONAPI.Relationships(resources: resources, included: $0) }
       }
     }
+  }
+}
+
+private func extractIdentifier(insertingInto result: [ResourceIdentifier: JSON], from data: JSON) -> Decoded<[ResourceIdentifier: JSON]> {
+  return ResourceIdentifier.decode(data) >>- { id in
+    guard result[id] == nil else { return .customError("multiple included resources for key '\(id)'") }
+    return pure(result.inserting(data, forKey: id))
   }
 }
 
@@ -62,38 +50,38 @@ extension JSONAPI.Relationships {
   public static func <| <T: JSONAPIDecodable> (lhs: JSONAPI.Relationships, rhs: String) -> Decoded<T>
     where T.DecodedType == T
   {
-    guard var relationships = lhs.rawValue else {
+    guard let relationships = lhs.rawValue else {
       return .customError("expected relationships, but got none")
     }
 
     let id: Decoded<ResourceIdentifier> = relationships.resources <| [rhs, "data"]
 
-    return id >>- { decodeResource(with: $0, from: &relationships) }
+    return id >>- { decodeResource(with: $0, from: relationships) }
   }
 
   public static func <|| <T: JSONAPIDecodable> (lhs: JSONAPI.Relationships, rhs: String) -> Decoded<[T]>
     where T.DecodedType == T
   {
-    guard var relationships = lhs.rawValue else {
+    guard let relationships = lhs.rawValue else {
       return .customError("expected relationships, but got none")
     }
 
     let ids: Decoded<[ResourceIdentifier]> = relationships.resources <|| [rhs, "data"]
 
     return ids >>- { ids in
-      sequence(ids.map { decodeResource(with: $0, from: &relationships) })
+      sequence(ids.map { decodeResource(with: $0, from: relationships) })
     }
   }
 
-  private static func decodeResource<T: JSONAPIDecodable>(with id: ResourceIdentifier, from relationships: inout JSONAPI.RawRelationships) -> Decoded<T>
+  private static func decodeResource<T: JSONAPIDecodable>(with id: ResourceIdentifier, from relationships: JSONAPI.RawRelationships) -> Decoded<T>
     where T.DecodedType == T
   {
-    let data = relationships.remove(with: id).map(pure) ?? .customError("relationship not found with id '\(id)'")
+    let data = relationships.included[id].map(pure) ?? .customError("relationship not found with id '\(id)'")
 
     let document = data.map { data in
       JSON.object([
         "data": data,
-        "included": .array(relationships.included),
+        "included": .array(Array(relationships.included.values)),
       ])
     }
 
