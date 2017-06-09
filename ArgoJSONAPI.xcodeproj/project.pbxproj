@@ -30,6 +30,7 @@
 		4ABAD0311E4522F100661CD9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABAD02A1E45229C00661CD9 /* Quick.framework */; };
 		4ABAD0331E4522FC00661CD9 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABAD0291E45229C00661CD9 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4ABAD0341E4522FC00661CD9 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABAD02A1E45229C00661CD9 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4AEBD85B1EEAD899000C683C /* Exports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEBD85A1EEAD899000C683C /* Exports.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		4ABAD01C1E450C6700661CD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ABAD0291E45229C00661CD9 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		4ABAD02A1E45229C00661CD9 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		4AEBD85A1EEAD899000C683C /* Exports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exports.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				4A7171BA1EE20FAC009C59EB /* ArgoJSONAPI.swift */,
 				4AA2F8D61EE33BB6003FF142 /* Data.swift */,
 				4A38B9531EE27B0C0076B261 /* Document.swift */,
+				4AEBD85A1EEAD899000C683C /* Exports.swift */,
 				4A7171B81EE2085D009C59EB /* JSONAPIDecodable.swift */,
 				4ABAD0101E450C6700661CD9 /* Info.plist */,
 			);
@@ -304,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AEBD85B1EEAD899000C683C /* Exports.swift in Sources */,
 				4A7171B91EE2085D009C59EB /* JSONAPIDecodable.swift in Sources */,
 				4A7171BB1EE20FAC009C59EB /* ArgoJSONAPI.swift in Sources */,
 				4A38B9541EE27B0C0076B261 /* Document.swift in Sources */,
