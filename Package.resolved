@@ -23,9 +23,9 @@
         "package": "Nimble",
         "repositoryURL": "https://github.com/Quick/Nimble.git",
         "state": {
-          "branch": "master",
-          "revision": "4cfe93e4b72f66fe63906df8f93729b6ed902a71",
-          "version": null
+          "branch": null,
+          "revision": "39b67002306fda9de4c9fd1290a6295f97edd09e",
+          "version": "7.0.1"
         }
       },
       {
@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/thoughtbot/Runes.git",
         "state": {
           "branch": null,
-          "revision": "727fcfe8d79ec92ce989a96329147190d20f7cd2",
-          "version": "4.0.1"
+          "revision": "e1bb1f7a589fe9172dc3410203f8b62373ea92a4",
+          "version": "4.1.0"
         }
       }
     ]
